@@ -223,6 +223,11 @@ message SendOrderConfirmationRequest {
 
 service CheckoutService {
     rpc PlaceOrder(PlaceOrderRequest) returns (PlaceOrderResponse) {}
+    rpc GetOrder(GetOrderRequest) returns (OrderResult) {}
+}
+
+message GetOrderRequest {
+    string order_id = 1;
 }
 
 message PlaceOrderRequest {
